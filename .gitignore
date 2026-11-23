@@ -1,0 +1,12 @@
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.*
+.obsidian/workspace*
+.obsidian/cache
+*.sqlite
+*.sqlite-journal
+*.sqlite-wal
+zotero.sqlite*
+storage/
