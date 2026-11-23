@@ -1,21 +1,21 @@
-# Zotero Style configuration
+# Zotero Style 配置
 
-## Custom tag column
+## 自定义标签列
 
-The Zotero Style plugin was used to configure a custom tag display column. The exact tag column expression was not preserved in this repository. Export the working configuration from your own installation before attempting to recreate it.
+此前已在 Zotero Style 中配置自定义标签列，但完整表达式尚未保存。后续可从当前 Zotero 配置中导出，再补充到仓库，避免凭记忆重建。
 
-## Hide the pink Graph View toolbar button (verified)
+## 隐藏 Graph View 按钮（已验证）
 
-The toolbar element was identified with the selector `#zoterostyle`.
+Zotero Style 的对应工具栏元素选择器为 `#zoterostyle`。
 
-1. Open Zotero's profile directory.
-2. Create `chrome/userChrome.css` if it does not exist.
-3. Add the CSS from [userChrome.css](userChrome.css).
-4. In advanced preferences, set `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`.
-5. Restart Zotero.
+1. 打开 Zotero 用户配置目录。
+2. 创建或编辑 `chrome/userChrome.css`。
+3. 复制 [userChrome.css](userChrome.css) 中的样式。
+4. 将高级首选项 `toolkit.legacyUserProfileCustomizations.stylesheets` 设为 `true`。
+5. 重启 Zotero。
 
-This is a UI-only customization. It hides the matching toolbar element and does not uninstall Zotero Style.
+这只隐藏对应界面元素，不卸载 Zotero Style。
 
-## Theme
+## Catppuccin 主题
 
-A Catppuccin theme was explored. Exact theme values were not preserved, so no theme preset is claimed as verified.
+此前探索过 Catppuccin 风格，但没有保存完整主题参数，因此暂不提供未经验证的预设。
