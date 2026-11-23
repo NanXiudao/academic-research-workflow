@@ -1,10 +1,10 @@
-# Changelog
+# 更新记录
 
 ## 2026-11-23
 
-- Initial documentation for the Zotero 10 + Obsidian + ZotLit 2.2 workflow.
-- Added verified Zotero native highlight HTML template.
-- Added Zotero Style Graph View toolbar CSS customization.
-- Documented the companion Zotero Drop Callout plugin and its tested output.
-- Added a clearly labeled reference draft for ZotLit annotation templates.
-- Added backup and migration checklist.
+- 初始化 Zotero 10、Obsidian、ZotLit 2.2 学术研究工作流仓库。
+- 保存 Zotero 原生高亮 HTML 模板与 Zotero Style Graph View 隐藏配置。
+- 记录 Zotero Drop Callout 插件的联动方式。
+- **新增 ZotLit 论文笔记模板和标注模板的完整原文。**
+- 将主要 README、配置说明与迁移文档调整为中文。
+- 保留未验证配置的说明，避免覆盖现有可用环境。
