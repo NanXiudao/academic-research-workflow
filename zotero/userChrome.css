@@ -1,0 +1,5 @@
+/* Zotero 10: hide Zotero Style's Graph View toolbar button.
+   Requires toolkit.legacyUserProfileCustomizations.stylesheets = true. */
+#zoterostyle {
+  display: none !important;
+}
