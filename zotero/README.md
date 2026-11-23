@@ -1,26 +1,26 @@
-# Zotero 10
+# Zotero 10 配置
 
-## Verified setup
+## 已验证功能
 
-- DOI-based metadata retrieval was working.
-- Zotero's built-in PDF reader was used to highlight papers.
-- Native PDF annotation drag-and-drop into Obsidian was working.
-- The native highlight note template was customized to produce an Obsidian-compatible callout.
+- 通过 DOI 获取文献元数据；
+- 使用 Zotero 内置 PDF 阅读器进行高亮；
+- 将 PDF 高亮直接拖入 Obsidian；
+- 使用原生高亮 HTML 模板生成兼容 Obsidian 的内容。
 
-## Native annotation template
+## 原生高亮模板
 
-See [templates/highlight.html](templates/highlight.html).
+模板文件：[templates/highlight.html](templates/highlight.html)
 
-In Zotero's advanced preferences, locate:
+在 Zotero 高级配置中找到：
 
 ```text
 extensions.zotero.annotations.noteTemplates.highlight
 ```
 
-Back up the existing value before replacing it. Restart or reopen the relevant editor if needed and test with a single highlight.
+先备份原值，再替换为模板文件内容。
 
-The `{{highlight quotes='false'}}` placeholder renders the highlighted text without surrounding quotation marks. Zotero may still append a deep link to the PDF annotation when dragged into Obsidian. The companion Obsidian plugin normalizes that link.
+`{{highlight quotes='false'}}` 用于输出不带外层引号的高亮文本；`{{citation}}` 输出 Zotero 当前引用格式。拖拽时可能额外产生 `([pdf](zotero://open-pdf/...))` 定位链接，由 Obsidian 端的 Zotero Drop Callout 插件负责调整位置。
 
-## Limitations
+## Zotero Style
 
-Zotero's native note-template expressions support placeholders and conditional logic, but this configuration does not rely on undocumented string-processing functions. Citation style and locale are controlled by Zotero's citation settings.
+参见 [zotero-style.md](zotero-style.md)。隐藏 Graph View 按钮的 CSS 已保存；自定义标签列的完整配置仍待补充。
