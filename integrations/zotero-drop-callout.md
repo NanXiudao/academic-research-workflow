@@ -1,34 +1,32 @@
-# Zotero → Obsidian: automatic PDF highlight callouts
+# Zotero → Obsidian：PDF 高亮自动转换
 
-**Companion plugin:** https://github.com/NanXiudao/zotero-drop-callout
+插件源码仓库：[Zotero Drop Callout](https://github.com/NanXiudao/zotero-drop-callout)
 
-## Installation
+## 安装
 
-Install the companion plugin in:
+在 Obsidian 仓库的以下目录放置插件：
 
 ```text
-<Obsidian vault>/.obsidian/plugins/zotero-drop-callout/
+<Obsidian 仓库>/.obsidian/plugins/zotero-drop-callout/
 ```
 
-The folder should contain `main.js` and `manifest.json`. Enable the plugin under Obsidian's Community plugins settings.
+目录内应包含 `main.js` 和 `manifest.json`。随后在 Obsidian「设置 → 第三方插件」中启用插件。
 
-## Configuration
+## 配置步骤
 
-1. In Zotero 10, back up and configure the native highlight note template: [highlight.html](../zotero/templates/highlight.html).
-2. Enable Zotero Drop Callout in Obsidian.
-3. Open an editable Markdown note.
-4. Drag one highlighted passage from Zotero's PDF reader into the note.
-5. Verify the callout title, text, single PDF link and citation.
+1. 在 Zotero 10 中备份并设置 [原生高亮模板](../zotero/templates/highlight.html)。
+2. 在 Obsidian 中启用 Zotero Drop Callout。
+3. 打开一篇可编辑的 Markdown 笔记。
+4. 从 Zotero PDF 阅读器拖入一条高亮。
+5. 检查 Callout 标题、正文、单个 Open PDF 链接和引用是否正确。
 
-## Verified outcome
+## 已验证效果
 
-The Obsidian plugin removes the inline `([pdf](zotero://open-pdf/...))` label and moves the deep link to the footer as `Open PDF`. It also removes a duplicate `Open PDF` label that may already exist in the Zotero native template.
+插件会识别原文中的 `([pdf](zotero://open-pdf/...))`，将链接移到底部并命名为 `Open PDF`，同时清理模板可能生成的重复 Open PDF 文本。页码由 URL 中的 `page` 参数提取，保留 `annotation` 标识符。
 
-The page number comes from the `page` URL parameter. The annotation ID is preserved so Zotero can navigate to the exact annotation.
+## 常见问题
 
-## Troubleshooting
-
-- **No conversion:** Check the plugin is enabled, the drop happens inside an editable note, and the inserted Markdown contains a `zotero://open-pdf/` link.
-- **Two Open PDF labels:** Verify you are using the current companion plugin, not an earlier v0.1.0 copy.
-- **Different author/year formatting:** Adjust Zotero citation style and locale; the plugin preserves citation text.
-- **No PDF navigation:** Verify Zotero is installed and registered as the handler for `zotero://` links.
+- **没有自动转换**：确认插件已启用，拖拽发生在可编辑笔记内，且内容包含 `zotero://open-pdf/` 链接。
+- **出现两个 Open PDF**：检查是否仍在使用旧版插件。
+- **作者、年份格式不同**：由 Zotero 引用样式与语言环境控制。
+- **点击后不能定位 PDF**：检查系统是否已将 `zotero://` 协议关联到 Zotero。
