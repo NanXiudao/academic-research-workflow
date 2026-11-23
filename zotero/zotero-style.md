@@ -49,6 +49,8 @@ C:\Users\你的用户名\AppData\Roaming\Zotero\Zotero\Profiles\xxxxxxxx.default
 
 Zotero 官方配置目录说明：https://www.zotero.org/support/kb/profile_directory
 
+> **实际案例（Windows）：** 如果当前目录是 `C:\\Users\\NanXiudao\\AppData\\Roaming\\Zotero\\Zotero\\Profiles\\jko7l9xs.default\\`，请不要直接把 `userChrome.css` 放在该目录。正确路径是 `C:\\Users\\NanXiudao\\AppData\\Roaming\\Zotero\\Zotero\\Profiles\\jko7l9xs.default\\chrome\\userChrome.css`。如果已经放错位置，新建 `chrome` 文件夹并将现有 CSS 文件剪切进去即可，无须重新创建文件。
+
 ## 二、建立 chrome 文件夹和 userChrome.css
 
 在**当前配置目录内部**创建一个名为 `chrome` 的文件夹。若已经存在，直接打开，不要删除其中原有文件。
